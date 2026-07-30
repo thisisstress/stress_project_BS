@@ -1,0 +1,22 @@
+# Data
+open/
+data/
+*.zip
+
+# Predictions and models
+submission*.csv
+submit*.csv
+*.pkl
+*.joblib
+*.pth
+*.bin
+
+# Notebook temporary files
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+
+# Environment
+.env
+.venv/
+venv/
