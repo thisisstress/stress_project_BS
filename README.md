@@ -51,12 +51,15 @@ flowchart LR
 
 | 항목 | 결과 |
 |---|---:|
-| 최종 모델 | **ExtraTrees + Pair-Neighbor** |
+| 최종 모델 | **BS 8/6 — ExtraTrees + Pair-Neighbor** |
 | 내부 검증 MAE | **0.1473** |
 | Public MAE | **0.1266866667** |
 | Private MAE | **0.1473** |
 | 최종 블렌드 | **ExtraTrees 76% + Pair-Neighbor 24%** |
 | 평가 지표 | Mean Absolute Error — 낮을수록 우수 |
+
+> **최종 모델 기준:** 이 README에서 “최종 모델”은 발표자료의 **BS 8/6** 모델, 즉 `submit_combined_final_0806_0.24.csv`를 생성한 설정을 뜻합니다.  
+> 이후의 `retuned` / `final_rule_compliant` 노트북은 BS 8/6 이후의 재튜닝·제출 규정 정리 기록이므로, 여기의 최종 채택 모델 설정과 구분합니다.
 
 ---
 
@@ -207,7 +210,7 @@ final_base_prediction
 |---|---:|---:|---|
 | 팀 V7 Pair-Neighbor | 0.146644 | 0.1272333333 | 강한 기준 모델 |
 | 박빛샘 V34 | 0.148033 | 0.1271866667 | Tree·Pair 공동 조정 |
-| **8월 6일 통합 모델** | **0.147300** | **0.1266866667** | **최종 채택** |
+| **BS 8/6 · 8월 6일 통합 모델** | **0.147300** | **0.1266866667** | **최종 채택** |
 | MI-weighted Gower | 0.149096 | 0.130060 | 독립 모델, 미채택 |
 
 > 내부 MAE는 실험마다 split과 검증 계약이 다를 수 있습니다.  
@@ -233,7 +236,7 @@ ExtraTrees 계열이 정말 최선인지 확인하기 위해 MI-weighted Gower �
 
 ## 🚀 처음 보는 사람을 위한 읽기 순서
 
-### 1. 최종 통합 모델
+### 1. BS 8/6 최종 채택 모델
 
 [`8_6/stress_prediction_combined_final_0806_1.ipynb`](8_6/stress_prediction_combined_final_0806_1.ipynb)
 
@@ -243,7 +246,8 @@ ExtraTrees 계열이 정말 최선인지 확인하기 위해 MI-weighted Gower �
 - Pair-Neighbor 48% 분위수
 - 76:24 블렌드
 - 거리 0.2 미만 Override
-- 내부 CV와 제출 파일 생성
+- 내부 CV에서 Pair weight `0.24` 선택
+- `submit_combined_final_0806_0.24.csv` 생성
 
 ### 2. 팀 V7 독립 재현
 
@@ -398,7 +402,7 @@ leaderboard:
    Pair-Neighbor와 근접중복 Override가 전역 트리 모델의 빈틈을 보완했습니다.
 
 5. **단일 점수보다 재현 가능한 검증 기록을 우선했습니다.**  
-   내부 검증과 Public·Private 결과가 함께 확인된 8월 6일 통합 모델을 최종 채택했습니다.
+   내부 검증과 Public·Private 결과가 함께 확인된 **BS 8/6 통합 모델**을 최종 채택했습니다.
 
 ---
 
@@ -406,7 +410,7 @@ leaderboard:
 
 ### Final Adopted Model
 
-**ExtraTrees 76% + Pair-Neighbor 24%**
+**BS 8/6 · ExtraTrees 76% + Pair-Neighbor 24%**
 
 **Public MAE 0.1266866667 · Private MAE 0.1473**
 
