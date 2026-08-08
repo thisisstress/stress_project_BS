@@ -30,7 +30,7 @@ flowchart LR
     E --> F["⑥ 8월 6일 통합<br/>Gender 제거 · Fold-local Winsorize"]
     F --> G["🏆 최종 채택 모델<br/>ExtraTrees 76% + Pair 24%<br/><b>Public 0.126687</b>"]
 
-    D -. 독립성 검증 .-> H["MI-weighted Gower<br/>Robust CV 0.149096<br/>Public 0.130060 · 미채택"]
+    A -. 팀 독립 비교 .-> H["P56C MI-weighted Gower<br/>안상균 / SK 연구축<br/>Robust CV 0.149096 · Public 0.130060"]
 
     classDef base fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
     classDef core fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
@@ -211,16 +211,16 @@ final_base_prediction
 | 팀 V7 Pair-Neighbor | 0.146644 | 0.1272333333 | 강한 기준 모델 |
 | 박빛샘 V34 | 0.148033 | 0.1271866667 | Tree·Pair 공동 조정 |
 | **BS 8/6 · 8월 6일 통합 모델** | **0.147300** | **0.1266866667** | **최종 채택** |
-| MI-weighted Gower | 0.149096 | 0.130060 | 독립 모델, 미채택 |
+| P56C MI-weighted Gower · 안상균/SK 독립 연구 | 0.149096 | 0.130060 | 독립 비교, 미채택 |
 
 > 내부 MAE는 실험마다 split과 검증 계약이 다를 수 있습니다.  
 > 같은 평가 계약이 아닌 점수의 작은 차이는 직접적인 우열로 해석하지 않습니다.
 
 ---
 
-## 🔎 독립 모델 탐색
+## 🔎 팀 독립 모델 비교
 
-ExtraTrees 계열이 정말 최선인지 확인하기 위해 MI-weighted Gower 모델을 별도로 검증했습니다.
+BS의 ExtraTrees·Pair 계열과 다른 방향도 경쟁력이 있는지 확인하기 위해, **안상균/SK 연구축에서 별도로 검증한 P56C MI-weighted Gower**를 비교 대상으로 함께 기록합니다. 이 모델은 BS 계보의 파생 모델이 아니라 팀 내 별도 독립 연구입니다.
 
 - 수치형·범주형을 함께 다루는 Gower 거리
 - Mutual Information 가중치 `62.5%`
@@ -230,7 +230,7 @@ ExtraTrees 계열이 정말 최선인지 확인하기 위해 MI-weighted Gower �
 - 표준편차 `0.001215`
 - Public MAE `0.130060`
 
-최종 모델보다 성능은 낮았지만, 완전히 다른 계열의 모델도 경쟁력이 있음을 확인했고 저비중 보완 후보로 보존했습니다.
+최종 BS 8/6 모델보다 성능은 낮았지만, 완전히 다른 계열의 모델도 경쟁력이 있음을 확인한 독립 비교 근거로 보존합니다.
 
 ---
 
