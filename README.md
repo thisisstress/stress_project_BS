@@ -112,4 +112,8 @@ bone_density
 | [`stress_project_JH`](https://github.com/thisisstress/stress_project_JH) | V7 Pair-Neighbor 연구와 실행 코드 |
 | `stress_project_SK` | 대안 모델과 후속 R&D 기록 |
 
-대회 데이터는 저장소에 포함하지 않습니다.
+대회 원본 `train.csv`·`test.csv`와 정답 레이블은 저장소에 포함하지 않습니다. 공개 Notebook의 원본 데이터 미리보기 출력은 제거했으며, OOF 파일에는 모델 예측값만 보존합니다.
+
+## License and attribution
+
+팀이 작성한 소스 코드와 문서는 [MIT License](LICENSE)로 공개합니다. 공동 저자와 역할은 [AUTHORS.md](AUTHORS.md), 데이터·제3자 자료의 제외 범위는 [LICENSE_SCOPE.md](LICENSE_SCOPE.md)에서 확인할 수 있습니다.
