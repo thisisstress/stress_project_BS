@@ -39,6 +39,17 @@
 기준 없는 단일 퍼센트 향상 표현 대신 원 점수와 비교 대상을 함께 기록합니다.  
 → [UNIFIED evaluation notes](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
 
+### Repository navigation
+
+이 저장소에는 해커톤 기간의 탐색 실험과 생성 산출물이 함께 보존되어 있습니다. **최종 모델을 확인할 때는 아래 경로를 기준으로 합니다.**
+
+1. **Canonical final:** [`8_6/stress_prediction_combined_final_0806_1.ipynb`](8_6/stress_prediction_combined_final_0806_1.ipynb)
+2. **Final-candidate comparison:** [`8_6/stress_prediction_final_candidates_0806.ipynb`](8_6/stress_prediction_final_candidates_0806.ipynb)
+3. **Team lineage / score SSOT:** [`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)
+4. `8/5/`, `8/5/8/5_result/`, CatBoost logs, SVR screens and 기타 CSV는 **historical experiment artifacts**이며 현재 final을 의미하지 않습니다.
+
+과거 실험 산출물은 provenance와 negative-result 기록을 위해 보존하며, 파일명에 `best`, `final`, `submission`이 포함되어 있어도 루트 README의 canonical final 지정보다 우선하지 않습니다.
+
 ## 모델 구조
 
 ```mermaid
