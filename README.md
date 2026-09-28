@@ -36,7 +36,7 @@
 - Team V7 lineage milestone: `0.1272333333 → 0.1266866667` (Δ `-0.0005467`, 약 **0.43% 상대 감소**)
 - V14 historical public reference: `0.1278085845 → 0.1266866667`은 약 **0.88% 상대 감소**지만 canonical baseline으로 간주하지 않음
 
-기준 없는 “0.9% 성능 향상” 표현 대신 원 점수와 비교 대상을 함께 기록합니다.  
+기준 없는 단일 퍼센트 향상 표현 대신 원 점수와 비교 대상을 함께 기록합니다.  
 → [UNIFIED evaluation notes](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
 
 ## 모델 구조
