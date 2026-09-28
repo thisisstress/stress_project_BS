@@ -30,6 +30,15 @@
 **Canonical submission setting:** `submit_combined_final_0806_0.24.csv` 생성 설정  
 **Post-final records:** `retuned` · `final_rule_compliant`
 
+### Score context
+
+- V1 initial baseline anchor: Public MAE `0.1282776667 → 0.1266866667` (Δ `-0.0015910`, 약 **1.24% 상대 감소**)
+- Team V7 lineage milestone: `0.1272333333 → 0.1266866667` (Δ `-0.0005467`, 약 **0.43% 상대 감소**)
+- V14 historical public reference: `0.1278085845 → 0.1266866667`은 약 **0.88% 상대 감소**지만 canonical baseline으로 간주하지 않음
+
+기준 없는 “0.9% 성능 향상” 표현 대신 원 점수와 비교 대상을 함께 기록합니다.  
+→ [UNIFIED evaluation notes](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
+
 ## 모델 구조
 
 ```mermaid
@@ -116,7 +125,7 @@ bone_density
 |---|---|
 | [`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED) | 팀 최종 결과 · 모델 계보 |
 | [`stress_project_JH`](https://github.com/thisisstress/stress_project_JH) | V7 Pair-Neighbor · 실행 코드 |
-| `stress_project_SK` | 대안 모델 · 후속 R&D |
+| `stress_project_SK` *(private)* | 대안 모델 · 후속 내부 R&D |
 
 **Data boundary:** 원본 `train.csv` · `test.csv` · 정답 레이블 미포함. 공개 Notebook 원본 데이터 preview 제거. OOF 파일은 모델 예측값만 보존.
 
